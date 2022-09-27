@@ -4,7 +4,11 @@ import os
 from gtts import gTTS
 from io import BytesIO, StringIO
 
-st.title("Text to speech")
+st.set_page_config(
+	page_title='Text to Speech'
+)
+
+st.title("Text to Speech")
 text_or_document = st.selectbox("Input Text or Document?", ['Text', 'Document'])
 if text_or_document == 'Text':
     text = st.text_input("Enter text:")
